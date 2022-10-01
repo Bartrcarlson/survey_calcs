@@ -1,4 +1,4 @@
-from survey_angle_functions import *
+from angle_funcs_v2 import *
 ### 9-3 Three lines have the following north azimuths: 146° 18', 227°36' and 332°48'. What are their bearings
 
             # d  m  s
