@@ -1,6 +1,8 @@
 import re
 import angle_funcs_v2 as af
 import math
+## module is in current dev only BC should bother with
+
 
 """    0     1        2    3   4 5    6     7
 p1 = ['N/S',[d,m,s],'E/W',dist,e,n,[proj_e],[proj_n]]
@@ -9,6 +11,7 @@ need to be able to compute forward and backwards
 need to have a system of averaging ties with respect to distance
 bearings work on assumption of clockwise traverse 
 ignoring issues of grid vs ground dist
+need to convert to OO 
 """
 def lat_dep(az,dist):
     e_dep = math.sin(math.radians(az)) * dist
