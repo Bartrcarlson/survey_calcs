@@ -24,6 +24,7 @@ def dms_to_dd(dms):
     return dms[0] + dms[1]/60 + dms[2]/3600
 
 
+
 def az_to_bearing(az,type):
 
     bearing =[None]*3
@@ -79,6 +80,7 @@ def bearing_to_az(bearing, type):
         return dd_to_dms(az) 
 
 
+
 def internal_angles(sides):
     angles = []
     for i in range(len(sides)):
@@ -90,6 +92,8 @@ def internal_angles(sides):
             angles.append(abs(180 - x))
     return angles
 
+
+
 def deflection_angles(sides):
     angles = []
     for i in range(len(sides)):
@@ -100,6 +104,8 @@ def deflection_angles(sides):
         else:
             angles.append(abs(x))
     return angles
+
+
 
 def side_ex_ang(int_angle,prev_side):
     run = (180-int_angle) + prev_side
