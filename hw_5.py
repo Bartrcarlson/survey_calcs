@@ -8,7 +8,8 @@ C = [110,46,0]
 D = [98,24,0]
 E = [122,37,0]
 ang_lst = [B,C,D,E]
-ab_az = af.bearing_to_az([ab[0],af.dms_to_dd(ab[1]),ab[2]],'dd')
+ab_az = af.bearing_to_az([ab[0],af.dms_to_dd(ab[1]),ab[2]],'dd') ## this is the old method. new way uses--
+## class types from survey. 
 
 ##problem 1.1
 sum_of_angles = 0
@@ -54,12 +55,19 @@ EA  [338, 13, 48]    ['N', [21, 46, 12], 'w']
 # CD = ['S',[14,47,0],'W',653.1]
 # DA = ['N',[68,43,0],'W',550.9
 
-AB = survey.Line(survey.Angle(['N',[8,17,0],'E']), 404.03, [0,0])
-BC = survey.Line(survey.Angle(['N',[87,2,0],'E']),662.13)
-CD = survey.Line(survey.Angle(['S',[14,47,0],'W']),653.16)
-DA = survey.Line(survey.Angle(['N',[68,43,0],'W']),550.94)
+# AB = survey.Line(survey.Angle(['N',[8,17,0],'E']), 404.03, [0,0])
+# BC = survey.Line(survey.Angle(['N',[87,2,0],'E']), 662.13)
+# CD = survey.Line(survey.Angle(['S',[14,47,0],'W']), 653.16)
+# DA = survey.Line(survey.Angle(['N',[68,43,0],'W']), 550.94)
+# lst = [AB,BC,CD,DA]
+
+# print(AB.ang)
+
+AB = survey.Angle(['N',[8,17,0],'E'])
+BC = survey.Angle(['N',[87,2,0],'E'])
+CD = survey.Angle(['S',[14,47,0],'W'])
+DA = survey.Angle(['N',[68,43,0],'W'])
 lst = [AB,BC,CD,DA]
 
-print(AB.dep)
-
-
+for i in lst:
+    print(i.ang )

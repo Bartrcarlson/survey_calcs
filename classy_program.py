@@ -30,7 +30,3 @@ class Line():
         self.start_p = start_p
 
 
-
-
-
-
